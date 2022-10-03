@@ -3,7 +3,7 @@ package handlers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import org.json.JSONObject;
-import persistence.InMemStorage;
+import persistence.InMemoryStorage;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -11,11 +11,11 @@ import java.nio.charset.StandardCharsets;
 /**
  * Handler for retrieving a single record for a from InMemoryStorage.
  */
-public class GetHandler implements HttpHandler {
+public class GetSingleRecordHandler implements HttpHandler {
 
-    private final InMemStorage storage;
+    private final InMemoryStorage storage;
 
-    public GetHandler(InMemStorage storage) {
+    public GetSingleRecordHandler(InMemoryStorage storage) {
         this.storage = storage;
     }
 
