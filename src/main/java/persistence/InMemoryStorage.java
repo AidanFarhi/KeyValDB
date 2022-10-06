@@ -17,6 +17,8 @@ public class InMemoryStorage {
         storage = new HashMap<>();
     }
 
+    public Map<String, JSONObject> getStorage() { return storage; }
+
     public JSONObject get(String key) {
         return storage.get(key);
     }
